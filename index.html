@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Glow | Luxury Tanning Experience</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Montserrat:wght@200;400;600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --brand-dark: #1A120B;
+            --brand-gold: #D4AF37;
+            --brand-cream: #F5EFE6;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--brand-cream);
+            color: var(--brand-dark);
+            scroll-behavior: smooth;
+        }
+
+        .font-serif {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .hero-zoom {
+            animation: slowZoom 20s infinite alternate;
+        }
+
+        @keyframes slowZoom {
+            from {
+                transform: scale(1);
+            }
+
+            to {
+                transform: scale(1.1);
+            }
+        }
+
+        .overlay {
+            background: linear-gradient(to bottom, rgba(26, 18, 11, 0.2), rgba(26, 18, 11, 0.6));
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+
+    <nav class="fixed w-full z-50 px-6 md:px-12 py-8 flex justify-between items-center mix-blend-difference text-white">
+        <div class="hidden md:block text-[10px] uppercase tracking-[0.4em] font-light">Elegance in every drop</div>
+        <div class="text-3xl font-serif italic tracking-tighter font-bold uppercase">Aura Glow</div>
+        <div class="flex gap-6 text-[10px] uppercase tracking-widest">
+            <a href="#catalog" class="hover:opacity-50 transition">Shop</a>
+            <a href="#" class="hover:opacity-50 transition">Bag (0)</a>
+        </div>
+    </nav>
+
+    <section class="relative h-screen w-full overflow-hidden flex items-center justify-center">
+        <div class="absolute inset-0 overlay z-10"></div>
+        <img src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?auto=format&fit=crop&w=1920&q=80"
+            class="absolute inset-0 w-full h-full object-cover hero-zoom" alt="Luxury Glow">
+
+        <div class="relative z-20 text-center text-white">
+            <h1 class="text-7xl md:text-9xl font-serif italic mb-6 leading-tight">Sun-Kissed<br>Soul</h1>
+            <p class="text-xs md:text-sm uppercase tracking-[0.6em] font-extralight mb-12">The Ultimate Luxury Tanning
+                Collection</p>
+            <a href="#catalog"
+                class="px-12 py-4 bg-white text-black text-[10px] uppercase tracking-[0.3em] font-bold hover:bg-transparent hover:text-white border border-white transition-all duration-500">
+                Explore The Glow
+            </a>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 text-center max-w-3xl mx-auto">
+        <span class="text-[10px] uppercase tracking-[0.4em] text-gray-400">Our Philosophy</span>
+        <h2 class="text-4xl font-serif italic mt-6 mb-8 text-[#3C2A21]">Vẻ đẹp không đến từ ánh nắng, nó đến từ sự tự
+            tin bên trong làn da óng ả.</h2>
+        <p class="text-sm leading-relaxed text-gray-500 font-light">Sản phẩm của Aura Glow được thiết kế tại Châu Âu,
+            mang lại sắc nâu espresso thượng lưu mà không cần tiếp xúc trực tiếp với tia UV có hại.</p>
+    </section>
+
+    <section id="catalog" class="py-20 px-6 md:px-16 bg-white">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+
+            <div class="group cursor-pointer">
+                <div class="aspect-[3/4] overflow-hidden bg-[#F2F2F2] mb-6 relative">
+                    <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=800&q=80"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                </div>
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="text-xl font-serif italic">Mousse Tanning Espresso</h3>
+                        <p class="text-[10px] text-gray-400 uppercase tracking-widest mt-1">Deep Dark / 200ml</p>
+                    </div>
+                    <span class="text-sm font-light italic">890,000đ</span>
+                </div>
+            </div>
+
+            <div class="group cursor-pointer">
+                <div class="aspect-[3/4] overflow-hidden bg-[#F2F2F2] mb-6 relative">
+                    <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                </div>
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="text-xl font-serif italic">Shimmer Glow Oil</h3>
+                        <p class="text-[10px] text-gray-400 uppercase tracking-widest mt-1">Golden Hour / 100ml</p>
+                    </div>
+                    <span class="text-sm font-light italic">750,000đ</span>
+                </div>
+            </div>
+
+            <div class="group cursor-pointer">
+                <div class="aspect-[3/4] overflow-hidden bg-[#F2F2F2] mb-6 relative">
+                    <img src="https://images.unsplash.com/photo-1590439471364-192aa70c0b53?auto=format&fit=crop&w=800&q=80"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                </div>
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="text-xl font-serif italic">Pre-Tan Body Scrub</h3>
+                        <p class="text-[10px] text-gray-400 uppercase tracking-widest mt-1">Smooth Skin / 250g</p>
+                    </div>
+                    <span class="text-sm font-light italic">520,000đ</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="bg-[#1A120B] py-2">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
+            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=600&q=80"
+                class="aspect-square object-cover opacity-80 hover:opacity-100 transition">
+            <img src="https://images.unsplash.com/photo-1581044777550-4cfa60707c03?auto=format&fit=crop&w=600&q=80"
+                class="aspect-square object-cover opacity-80 hover:opacity-100 transition text-white">
+            <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=600&q=80"
+                class="aspect-square object-cover opacity-80 hover:opacity-100 transition">
+            <img src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=600&q=80"
+                class="aspect-square object-cover opacity-80 hover:opacity-100 transition">
+        </div>
+    </section>
+
+    <footer class="bg-white py-20 px-6 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="text-2xl font-serif italic mb-8 md:mb-0">Aura Glow</div>
+            <div class="flex flex-col items-center md:items-end">
+                <p class="text-[10px] uppercase tracking-[0.4em] mb-4 text-gray-400">Join the movement</p>
+                <div class="flex gap-8 text-[10px] uppercase tracking-widest">
+                    <a href="#" class="hover:text-gold transition">Instagram</a>
+                    <a href="#" class="hover:text-gold transition">Tiktok</a>
+                    <a href="#" class="hover:text-gold transition">Facebook</a>
+                </div>
+            </div>
+        </div>
+        <p class="text-center text-[8px] text-gray-300 uppercase tracking-widest mt-20">© 2026 Crafted for the Slay. All
+            rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
