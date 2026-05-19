@@ -1,10 +1,10 @@
 /* style.css */
 :root {
-    --brand-dark: #1A120B;
-    --brand-brown: #3C2A21;
-    --brand-gold: #D4AF37;
-    --brand-cream: #F5EFE6;
-    --brand-soft: #E7D8C9;
+    --brand-dark: #3b1c0a;
+    --brand-brown: #542c16;
+    --brand-gold: #c68a53;
+    --brand-cream: #f9f4f0;
+    --brand-soft: #ebdcd1;
 }
 
 * {

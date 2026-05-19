@@ -7,7 +7,7 @@ const products = [
         name: 'Tan Lab Self-Tan Body Cream',
         subtitle: 'Kem dưỡng nâu / 200ml',
         price: 449000,
-        image: 'images/z7842254408607_39192d66899d9910a11201281440f884.jpg',
+        image: 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=900&q=80',
         fallback: 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=900&q=80'
     },
     {
@@ -15,7 +15,7 @@ const products = [
         name: 'Glow Application Mitt',
         subtitle: 'Găng thoa đều màu',
         price: 129000,
-        image: 'images/z7842254416802_f629e634fcd85cf23d7a1003a0c2252b.jpg',
+        image: 'https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=900&q=80',
         fallback: 'https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=900&q=80'
     },
     {
@@ -23,7 +23,7 @@ const products = [
         name: 'Pre-Tan Body Scrub Mini',
         subtitle: 'Tẩy da chết trước tanning',
         price: 199000,
-        image: 'images/z7842254430944_90b54bc7d8e05800e88a56d053ab7e6b.jpg',
+        image: 'https://images.unsplash.com/photo-1590439471364-192aa70c0b53?auto=format&fit=crop&w=900&q=80',
         fallback: 'https://images.unsplash.com/photo-1590439471364-192aa70c0b53?auto=format&fit=crop&w=900&q=80'
     },
     {
@@ -31,7 +31,7 @@ const products = [
         name: 'The Perfect Glow Bundle',
         subtitle: 'Kem + găng + scrub mini',
         price: 599000,
-        image: 'images/z7842254432904_7ef37129c5352879b7b5766f94a3b8ae.jpg',
+        image: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=900&q=80',
         fallback: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=900&q=80'
     }
 ];
@@ -59,14 +59,14 @@ function renderProducts() {
             </div>
             <div class="flex justify-between items-start flex-grow gap-4">
                 <div>
-                    <h3 class="text-xl font-serif italic text-[#1A120B]">${product.name}</h3>
+                    <h3 class="text-xl font-serif italic text-[var(--brand-dark)]">${product.name}</h3>
                     <p class="text-[10px] text-gray-400 uppercase tracking-widest mt-1">${product.subtitle}</p>
                 </div>
                 <span class="text-sm font-light italic whitespace-nowrap">${formatMoney(product.price)}</span>
             </div>
             <button onclick="addToCart('${product.id}')"
-                class="mt-6 w-full border border-black py-3 text-[10px] uppercase tracking-widest hover:bg-[#1A120B] hover:text-white transition-colors duration-300">
-                Add to Bag
+                class="mt-6 w-full border border-[var(--brand-dark)] text-[var(--brand-dark)] py-3 text-[10px] uppercase tracking-widest hover:bg-[var(--brand-dark)] hover:text-white transition-colors duration-300">
+                Mua ngay
             </button>
         </article>
     `).join('');
