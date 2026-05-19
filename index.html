@@ -20,20 +20,20 @@
 </head>
 
 <body>
-    <nav class="nav" id="navbar">
-        <div class="nav-left">
-            <a href="#message">Kem dưỡng nâu</a>
-            <a href="#catalog">Sản phẩm</a>
-        </div>
+    <div class="nav-left">
+        <a href="#message">Kem dưỡng nâu</a>
+        <a href="#catalog">Sản phẩm</a>
+        <a href="#limited-offer" class="offer-link">Ưu đãi</a>
+    </div>
 
-        <a class="brand" href="#home">TanLab</a>
+    <a class="brand" href="#home">TanLab</a>
 
-        <div class="nav-right">
-            <a href="#about">Tổng quan</a>
-            <a href="#values">Giá trị</a>
-            <a href="#catalog">Catalog</a>
-            <button class="bag-btn" onclick="openCart()">Giỏ hàng (<span id="cart-count">0</span>)</button>
-        </div>
+    <div class="nav-right">
+        <a href="#about">Tổng quan</a>
+        <a href="#values">Giá trị</a>
+        <a href="#catalog">Catalog</a>
+        <button class="bag-btn" onclick="openCart()">Giỏ hàng (<span id="cart-count">0</span>)</button>
+    </div>
     </nav>
 
     <main>
@@ -41,6 +41,86 @@
         <section class="hero" id="home">
             <img class="hero-bg" src="images/z7842640692176_6951cb6bffa17d488943d13423eced29.jpg"
                 alt="TanLab kem dưỡng nâu">
+        </section>
+
+        <!-- TẦM NHÌN & SỨ MỆNH - ĐẨY LÊN ĐẦU -->
+        <section class="section section-dark" id="vision">
+            <div class="container">
+                <div class="section-head">
+                    <div class="section-kicker">Tầm nhìn & Sứ mệnh</div>
+                    <h2 class="section-title">Tan on your terms</h2>
+                    <p class="section-desc">
+                        TanLab đưa kem dưỡng nâu trở thành một bước skincare chủ động, dễ hiểu và dễ tiếp cận
+                        cho người dùng Việt.
+                    </p>
+                </div>
+
+                <div class="proof-grid">
+                    <div class="copy-card dark">
+                        <h2>Tầm nhìn</h2>
+                        <p>
+                            Trở thành thương hiệu kem dưỡng nâu mang tinh thần skincare:
+                            sang, rõ ràng, dễ mua và tạo cảm giác an tâm khi sử dụng.
+                        </p>
+
+                        <br>
+
+                        <h2>Sứ mệnh</h2>
+                        <p>
+                            Giúp người dùng chọn sắc nâu theo cách riêng thông qua routine đơn giản:
+                            làm sạch, thoa đều, dưỡng ẩm và duy trì đều đặn.
+                        </p>
+
+                        <div class="section-actions">
+                            <a class="btn btn-primary" href="#catalog">Xem sản phẩm</a>
+                        </div>
+                    </div>
+
+                    <div class="proof-image">
+                        <img src="images/z7842254461715_c4123ecdbe53d917b1d71192454bd4f1.jpg" alt="Cam kết TanLab">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GIÁ TRỊ CỐT LÕI - ĐẨY LÊN ĐẦU -->
+        <section class="section section-cream" id="values">
+            <div class="container">
+                <div class="section-head">
+                    <div class="section-kicker">Giá trị cốt lõi</div>
+                    <h2 class="section-title">Nâu là lựa chọn, không phải rủi ro.</h2>
+                    <p class="section-desc">
+                        Toàn bộ website giữ một thông điệp duy nhất: người dùng được quyền chọn sắc nâu
+                        phù hợp với bản thân, thông qua một routine chăm sóc da rõ ràng.
+                    </p>
+                </div>
+
+                <div class="value-grid">
+                    <article class="value-card">
+                        <span>01</span>
+                        <h3>Choice</h3>
+                        <p>Da nâu là lựa chọn cá nhân, không phải áp lực phải theo một chuẩn đẹp duy nhất.</p>
+                    </article>
+
+                    <article class="value-card">
+                        <span>02</span>
+                        <h3>Control</h3>
+                        <p>Người dùng chủ động cách dùng, thời điểm dùng và mức độ duy trì sắc nâu.</p>
+                    </article>
+
+                    <article class="value-card">
+                        <span>03</span>
+                        <h3>Care</h3>
+                        <p>Kem dưỡng nâu được đặt trong routine skincare: làm sạch, thoa đều, dưỡng ẩm.</p>
+                    </article>
+
+                    <article class="value-card">
+                        <span>04</span>
+                        <h3>Confidence</h3>
+                        <p>Tự tin đến từ việc hiểu làn da của mình và chọn sản phẩm phù hợp.</p>
+                    </article>
+                </div>
+            </div>
         </section>
 
         <!-- THÔNG ĐIỆP -->
@@ -137,107 +217,28 @@
             </div>
         </section>
 
-        <!-- TẦM NHÌN & SỨ MỆNH -->
-        <section class="section section-dark">
-            <div class="container">
-                <div class="section-head">
-                    <div class="section-kicker">Tầm nhìn & Sứ mệnh</div>
-                    <h2 class="section-title">Tan on your terms</h2>
-                    <p class="section-desc">
-                        TanLab đưa kem dưỡng nâu trở thành một bước skincare chủ động, dễ hiểu và dễ tiếp cận
-                        cho người dùng Việt.
-                    </p>
-                </div>
-
-                <div class="proof-grid">
-                    <div class="copy-card dark">
-                        <h2>Tầm nhìn</h2>
-                        <p>
-                            Trở thành thương hiệu kem dưỡng nâu mang tinh thần skincare:
-                            sang, rõ ràng, dễ mua và tạo cảm giác an tâm khi sử dụng.
-                        </p>
-
-                        <br>
-
-                        <h2>Sứ mệnh</h2>
-                        <p>
-                            Giúp người dùng chọn sắc nâu theo cách riêng thông qua routine đơn giản:
-                            làm sạch, thoa đều, dưỡng ẩm và duy trì đều đặn.
-                        </p>
-
-                        <div class="section-actions">
-                            <a class="btn btn-primary" href="#catalog">Xem sản phẩm</a>
-                        </div>
-                    </div>
-
-                    <div class="proof-image">
-                        <img src="images/z7842254461715_c4123ecdbe53d917b1d71192454bd4f1.jpg" alt="Cam kết TanLab">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- GIÁ TRỊ -->
-        <section class="section section-cream" id="values">
-            <div class="container">
-                <div class="section-head">
-                    <div class="section-kicker">Giá trị cốt lõi</div>
-                    <h2 class="section-title">Nâu là lựa chọn, không phải rủi ro.</h2>
-                    <p class="section-desc">
-                        Toàn bộ website giữ một thông điệp duy nhất: người dùng được quyền chọn sắc nâu
-                        phù hợp với bản thân, thông qua một routine chăm sóc da rõ ràng.
-                    </p>
-                </div>
-
-                <div class="value-grid">
-                    <article class="value-card">
-                        <span>01</span>
-                        <h3>Choice</h3>
-                        <p>Da nâu là lựa chọn cá nhân, không phải áp lực phải theo một chuẩn đẹp duy nhất.</p>
-                    </article>
-
-                    <article class="value-card">
-                        <span>02</span>
-                        <h3>Control</h3>
-                        <p>Người dùng chủ động cách dùng, thời điểm dùng và mức độ duy trì sắc nâu.</p>
-                    </article>
-
-                    <article class="value-card">
-                        <span>03</span>
-                        <h3>Care</h3>
-                        <p>Kem dưỡng nâu được đặt trong routine skincare: làm sạch, thoa đều, dưỡng ẩm.</p>
-                    </article>
-
-                    <article class="value-card">
-                        <span>04</span>
-                        <h3>Confidence</h3>
-                        <p>Tự tin đến từ việc hiểu làn da của mình và chọn sản phẩm phù hợp.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- FOMO NHẸ / URGENCY CÓ KIỂM SOÁT -->
+        <!-- ƯU ĐÃI 30 NGÀY -->
         <section class="section section-cream" id="limited-offer">
             <div class="container">
                 <div class="offer-card">
-                    <div class="section-kicker">Ưu đãi giới hạn</div>
+                    <div class="section-kicker">Ưu đãi 30 ngày</div>
 
-                    <h2>Bắt đầu routine dưỡng nâu hôm nay.</h2>
+                    <h2>Combo Face & Body tiết kiệm hơn.</h2>
 
                     <p>
-                        Combo Face & Body TanLab phù hợp cho người muốn bắt đầu routine dưỡng nâu đầy đủ,
-                        dễ kiểm soát và tiết kiệm hơn so với mua lẻ. Ưu đãi combo chỉ áp dụng trong thời gian giới hạn.
+                        Trong 30 ngày ưu đãi, Combo Face & Body TanLab dành cho người muốn bắt đầu routine dưỡng nâu
+                        đầy đủ: một sản phẩm cho mặt, một sản phẩm cho body, dễ dùng và tiết kiệm hơn so với mua lẻ.
                     </p>
 
                     <div class="pill-list center">
-                        <span class="pill">Combo tiết kiệm hơn</span>
-                        <span class="pill">Số lượng có hạn</span>
-                        <span class="pill">Routine đầy đủ</span>
+                        <span class="pill">Ưu đãi 30 ngày</span>
+                        <span class="pill">Combo Face & Body</span>
+                        <span class="pill">Tiết kiệm hơn</span>
                     </div>
 
                     <div class="section-actions center">
-                        <a class="btn btn-primary" href="#catalog">Xem ưu đãi</a>
+                        <button class="btn btn-primary" onclick="addToCart('combo-glow')">Mua combo ưu đãi</button>
+                        <a class="btn btn-ghost" href="#catalog">Xem catalog</a>
                     </div>
                 </div>
             </div>
@@ -292,20 +293,20 @@
                         </div>
                     </article>
 
-                    <article class="product-card">
+                    <article class="product-card featured-product">
                         <div class="product-img">
                             <img src="images/z7842552930827_e830ce6261ddad6ed3bbca3edf9dd028.jpg"
                                 alt="Combo Face và Body TanLab">
-                            <div class="product-tag">Combo</div>
+                            <div class="product-tag">Ưu đãi</div>
                         </div>
 
                         <div class="product-info">
                             <h3 class="product-name">Combo Face & Body TanLab</h3>
-                            <p class="product-subtitle">Bộ kem dưỡng nâu mặt và body</p>
+                            <p class="product-subtitle">Ưu đãi 30 ngày / bộ kem dưỡng nâu mặt và body</p>
 
                             <div class="product-bottom">
                                 <span class="price">999.000đ</span>
-                                <button class="buy-btn" onclick="addToCart('combo-glow')">Mua ngay</button>
+                                <button class="buy-btn" onclick="addToCart('combo-glow')">Mua ưu đãi</button>
                             </div>
                         </div>
                     </article>
@@ -317,8 +318,8 @@
         <section class="section section-dark">
             <div class="container proof-grid">
                 <div class="proof-image">
-                    <img src="images/z7842250760279_65921c2dab1022c28d20bdcb6bf2ec29.jpg"
-                        alt="Hướng dẫn sử dụng kem dưỡng nâu TanLab">
+                    <img src="images/z7842250773462_6bf214506cd68fba8970eb0a84c4cbf9.jpg"
+                        alt="Routine sử dụng kem dưỡng nâu TanLab">
                 </div>
 
                 <div>
@@ -366,11 +367,11 @@
             </div>
         </section>
 
-        <!-- HIỆU QUẢ MINH HỌA -->
+        <!-- HIỆU QUẢ SAU KHI SỬ DỤNG -->
         <section class="section section-cream">
             <div class="container split">
                 <div class="copy-card">
-                    <div class="section-kicker">Hiệu quả minh họa</div>
+                    <div class="section-kicker">Hiệu quả sau khi sử dụng</div>
                     <h2>Đều màu, sáng khỏe, rạng rỡ hơn.</h2>
                     <p>
                         Hình ảnh mang tính minh họa trải nghiệm sử dụng. Hiệu quả thực tế có thể khác nhau
@@ -379,7 +380,7 @@
                 </div>
 
                 <div class="image-card">
-                    <img src="images/z7842250773462_6bf214506cd68fba8970eb0a84c4cbf9.jpg"
+                    <img src="images/z7842250760279_65921c2dab1022c28d20bdcb6bf2ec29.jpg"
                         alt="Hiệu quả sau khi sử dụng TanLab">
                 </div>
             </div>

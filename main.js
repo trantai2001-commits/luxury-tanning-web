@@ -16,7 +16,7 @@ const products = [
     {
         id: 'combo-glow',
         name: 'Combo Face & Body TanLab',
-        subtitle: 'Bộ kem dưỡng nâu mặt và body',
+        subtitle: 'Ưu đãi 30 ngày / bộ kem dưỡng nâu mặt và body',
         price: 999000,
         image: 'images/z7842552930827_e830ce6261ddad6ed3bbca3edf9dd028.jpg'
     }
@@ -141,7 +141,104 @@ function checkout() {
         return;
     }
 
-    alert('Đây là demo frontend. Bước thanh toán thật sẽ được kết nối sau với cổng thanh toán hoặc backend.');
+    closeCart();
+    openCheckoutPage();
+}
+
+function openCheckoutPage() {
+    let checkoutPage = document.getElementById('checkoutPage');
+
+    if (!checkoutPage) {
+        checkoutPage = document.createElement('section');
+        checkoutPage.id = 'checkoutPage';
+        checkoutPage.className = 'checkout-page';
+        document.body.appendChild(checkoutPage);
+    }
+
+    const totalPrice = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+
+    const summaryItems = cart.map(item => `
+        <div class="checkout-summary-item">
+            <span>${item.name} × ${item.quantity}</span>
+            <strong>${formatMoney(item.price * item.quantity)}</strong>
+        </div>
+    `).join('');
+
+    checkoutPage.innerHTML = `
+        <div class="checkout-box">
+            <div class="checkout-head">
+                <div>
+                    <div class="section-kicker">Thanh toán</div>
+                    <h2>Hoàn tất đơn hàng</h2>
+                    <p>Điền thông tin để TanLab xác nhận đơn hàng và tư vấn routine dưỡng nâu phù hợp.</p>
+                </div>
+
+                <button class="checkout-close" onclick="closeCheckoutPage()">×</button>
+            </div>
+
+            <div class="checkout-grid">
+                <form class="checkout-form" onsubmit="submitCheckout(event)">
+                    <div>
+                        <label>Họ và tên</label>
+                        <input type="text" placeholder="Nhập họ tên" required>
+                    </div>
+
+                    <div>
+                        <label>Số điện thoại</label>
+                        <input type="tel" placeholder="Nhập số điện thoại" required>
+                    </div>
+
+                    <div>
+                        <label>Địa chỉ nhận hàng</label>
+                        <textarea placeholder="Nhập địa chỉ giao hàng" required></textarea>
+                    </div>
+
+                    <div>
+                        <label>Phương thức thanh toán</label>
+                        <select required>
+                            <option>Thanh toán khi nhận hàng</option>
+                            <option>Chuyển khoản ngân hàng</option>
+                            <option>Ví điện tử</option>
+                        </select>
+                    </div>
+
+                    <button class="checkout" type="submit">Xác nhận đặt hàng</button>
+                </form>
+
+                <div class="checkout-summary">
+                    <h3>Đơn hàng của bạn</h3>
+                    ${summaryItems}
+
+                    <div class="checkout-summary-total">
+                        <span>Tổng cộng</span>
+                        <span>${formatMoney(totalPrice)}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+
+    checkoutPage.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeCheckoutPage() {
+    const checkoutPage = document.getElementById('checkoutPage');
+
+    if (checkoutPage) {
+        checkoutPage.classList.remove('active');
+    }
+
+    document.body.style.overflow = '';
+}
+
+function submitCheckout(event) {
+    event.preventDefault();
+
+    alert('Đơn hàng demo đã được ghi nhận. Bước kết nối thanh toán thật sẽ được làm sau.');
+    cart = [];
+    updateCart();
+    closeCheckoutPage();
 }
 
 function scrollToTop() {
