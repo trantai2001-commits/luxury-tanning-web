@@ -1213,10 +1213,10 @@
         </section>
 
         <section class="gallery">
-            <img src="images/z7842254430944_90b54bc7d8e05800e88a56d053ab7e6b.jpg" alt="TanLab Body Cream">
-            <img src="images/z7842254447103_a0e83189f391dabe2c0b9d110fe6dff3.jpg" alt="TanLab Face Cream">
-            <img src="images/z7842250734793_01a7c3101c1b93836b75ab8dd4b9e083.jpg" alt="TanLab promotion body">
-            <img src="images/z7842254461715_c4123ecdbe53d917b1d71192454bd4f1.jpg" alt="TanLab product commitment">
+            <img src="images/z7842250773462_6bf214506cd68fba8970eb0a84c4cbf9.jpg" alt="TanLab Body Cream">
+            <img src="images/z7842254461715_c4123ecdbe53d917b1d71192454bd4f1.jpg" alt="TanLab Face Cream">
+            <img src="images/z7842552930827_e830ce6261ddad6ed3bbca3edf9dd028.jpg" alt="TanLab Combo">
+            <img src="images/z7842254456775_7cff4574d173bb0b93787c09cb3f4d78.jpg" alt="Thành phần TanLab">
         </section>
     </main>
 
@@ -1268,7 +1268,7 @@
                 name: 'Glow Resilience Body Cream',
                 subtitle: 'Kem dưỡng nâu body / 250ml',
                 price: 449000,
-                image: 'images/z7842254408607_39192d66899d9910a11201281440f884.jpg',
+                image: 'images/z7842250773462_6bf214506cd68fba8970eb0a84c4cbf9.jpg',
                 tag: 'Body care'
             },
             {
@@ -1276,24 +1276,16 @@
                 name: 'Glow Resilience Face Cream',
                 subtitle: 'Kem dưỡng nâu mặt / 50ml',
                 price: 399000,
-                image: 'images/z7842254447103_a0e83189f391dabe2c0b9d110fe6dff3.jpg',
+                image: 'images/z7842254461715_c4123ecdbe53d917b1d71192454bd4f1.jpg',
                 tag: 'Face care'
             },
             {
-                id: 'body-routine',
-                name: 'Body Glow Routine',
-                subtitle: 'Dưỡng thể nâu sáng & đều màu làn da',
-                price: 599000,
-                image: 'images/z7842254430944_90b54bc7d8e05800e88a56d053ab7e6b.jpg',
-                tag: 'Routine'
-            },
-            {
-                id: 'face-routine',
-                name: 'Face Glow Routine',
-                subtitle: 'Cho làn da Việt nâu sáng khỏe đẹp',
-                price: 499000,
-                image: 'images/z7842254461715_c4123ecdbe53d917b1d71192454bd4f1.jpg',
-                tag: 'Skincare'
+                id: 'combo-glow',
+                name: 'TanLab Full Glow Combo',
+                subtitle: 'Combo body cream + face cream',
+                price: 799000,
+                image: 'images/z7842552930827_e830ce6261ddad6ed3bbca3edf9dd028.jpg',
+                tag: 'Combo'
             }
         ];
 
@@ -1305,23 +1297,23 @@
             const productGrid = document.getElementById('product-grid');
 
             productGrid.innerHTML = products.map(product => `
-                <article class="product-card">
-                    <div class="product-img">
-                        <img src="${product.image}" alt="${product.name}">
-                        <div class="product-tag">${product.tag}</div>
-                    </div>
+        <article class="product-card">
+            <div class="product-img">
+                <img src="${product.image}" alt="${product.name}">
+                <div class="product-tag">${product.tag}</div>
+            </div>
 
-                    <div class="product-info">
-                        <h3 class="product-name">${product.name}</h3>
-                        <p class="product-subtitle">${product.subtitle}</p>
+            <div class="product-info">
+                <h3 class="product-name">${product.name}</h3>
+                <p class="product-subtitle">${product.subtitle}</p>
 
-                        <div class="product-bottom">
-                            <span class="price">${formatMoney(product.price)}</span>
-                            <button class="buy-btn" onclick="addToCart('${product.id}')">Mua ngay</button>
-                        </div>
-                    </div>
-                </article>
-            `).join('');
+                <div class="product-bottom">
+                    <span class="price">${formatMoney(product.price)}</span>
+                    <button class="buy-btn" onclick="addToCart('${product.id}')">Mua ngay</button>
+                </div>
+            </div>
+        </article>
+    `).join('');
         }
 
         function getProduct(productId) {
