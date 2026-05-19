@@ -189,6 +189,11 @@ function openCheckoutPage() {
                     </div>
 
                     <div>
+                        <label>Email</label>
+                        <input type="email" placeholder="Nhập địa chỉ email" required>
+                    </div>
+
+                    <div>
                         <label>Địa chỉ nhận hàng</label>
                         <textarea placeholder="Nhập địa chỉ giao hàng" required></textarea>
                     </div>
