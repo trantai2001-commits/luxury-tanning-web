@@ -1,15 +1,24 @@
 /* style.css */
 :root {
     --brand-dark: #1A120B;
+    --brand-brown: #3C2A21;
     --brand-gold: #D4AF37;
     --brand-cream: #F5EFE6;
+    --brand-soft: #E7D8C9;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: var(--brand-cream);
     color: var(--brand-dark);
-    scroll-behavior: smooth;
 }
 
 .font-serif {
@@ -17,7 +26,7 @@ body {
 }
 
 .hero-zoom {
-    animation: slowZoom 20s infinite alternate;
+    animation: slowZoom 22s infinite alternate ease-in-out;
 }
 
 @keyframes slowZoom {
@@ -26,15 +35,73 @@ body {
     }
 
     to {
-        transform: scale(1.1);
+        transform: scale(1.08);
     }
 }
 
 .overlay {
-    background: linear-gradient(to bottom, rgba(26, 18, 11, 0.2), rgba(26, 18, 11, 0.6));
+    background:
+        radial-gradient(circle at center, rgba(26, 18, 11, 0.12), rgba(26, 18, 11, 0.72)),
+        linear-gradient(to bottom, rgba(26, 18, 11, 0.08), rgba(26, 18, 11, 0.72));
 }
 
-/* Custom Scrollbar for Cart */
+.shadow-soft {
+    box-shadow: 0 28px 80px rgba(26, 18, 11, 0.12);
+}
+
+.value-card {
+    min-height: 260px;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 1.5rem;
+    box-shadow: 0 20px 50px rgba(26, 18, 11, 0.06);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 24px 70px rgba(26, 18, 11, 0.12);
+}
+
+.value-card span {
+    display: inline-block;
+    margin-bottom: 3rem;
+    font-size: 10px;
+    letter-spacing: 0.35em;
+    color: #9ca3af;
+}
+
+.value-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 2.25rem;
+    color: var(--brand-brown);
+    margin-bottom: 1rem;
+}
+
+.value-card p {
+    font-size: 0.875rem;
+    line-height: 1.8;
+    color: #6b7280;
+    font-weight: 300;
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 #cart-items::-webkit-scrollbar {
     width: 4px;
 }
@@ -44,5 +111,12 @@ body {
 }
 
 #cart-items::-webkit-scrollbar-thumb {
-    background: #1A120B;
+    background: var(--brand-dark);
+}
+
+@media (max-width: 640px) {
+    #navbar {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
 }
