@@ -401,10 +401,10 @@ img {
 .value-card span {
     display: inline-block;
     color: var(--brand-gold);
-    font-size: 14px;
-    letter-spacing: 0.26em;
+    font-size: 28px;
+    letter-spacing: 0.15em;
     font-weight: 800;
-    margin-bottom: 36px;
+    margin-bottom: 24px;
 }
 
 .value-card h3 {
