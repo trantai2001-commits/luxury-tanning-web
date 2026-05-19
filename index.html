@@ -2,246 +2,1467 @@
 <html lang="vi">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Goddess | Tan on your terms</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TanLab Skin Science | Tan on your terms</title>
+
+    <meta name="description"
+        content="TanLab Skin Science - KEM DƯỠNG NÂU DIGITAL MARKETING. Nâu là lựa chọn, không phải rủi ro. Tan on your terms - Nâu theo cách riêng của bạn." />
+    <link rel="canonical" href="https://tanlab-brown-danau.vercel.app/#catalog" />
+
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=Montserrat:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+
+    <style>
+        :root {
+            --brand-dark: #2a1207;
+            --brand-cockroach: #3b1c0a;
+            --brand-brown: #542c16;
+            --brand-copper: #8a4b26;
+            --brand-gold: #c68a53;
+            --brand-light-gold: #e7c08a;
+            --brand-cream: #f8f1eb;
+            --brand-soft: #ead7c8;
+            --white: #ffffff;
+            --black: #0b0705;
+            --gray: #6b625c;
+            --shadow: 0 28px 80px rgba(42, 18, 7, 0.22);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--brand-cream);
+            color: var(--brand-dark);
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button {
+            font-family: inherit;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        .serif {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            width: 100%;
+            padding: 22px 6vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            transition: 0.35s ease;
+        }
+
+        .nav.scrolled {
+            background: rgba(42, 18, 7, 0.82);
+            backdrop-filter: blur(18px);
+            box-shadow: 0 16px 45px rgba(0, 0, 0, 0.18);
+        }
+
+        .nav-left,
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            font-size: 10px;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        .brand {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 36px;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            color: #f1d5b4;
+        }
+
+        .bag-btn {
+            border: 1px solid rgba(255, 255, 255, 0.42);
+            background: rgba(255, 255, 255, 0.08);
+            color: white;
+            padding: 10px 14px;
+            border-radius: 999px;
+            cursor: pointer;
+            font-size: 10px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            transition: 0.25s ease;
+        }
+
+        .bag-btn:hover {
+            background: var(--brand-gold);
+            border-color: var(--brand-gold);
+            color: var(--brand-dark);
+        }
+
+        .hero {
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background: var(--brand-dark);
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            animation: heroZoom 18s ease-in-out infinite alternate;
+            opacity: 0.78;
+        }
+
+        @keyframes heroZoom {
+            from {
+                transform: scale(1);
+            }
+
+            to {
+                transform: scale(1.07);
+            }
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 65% 45%, rgba(198, 138, 83, 0.08), transparent 32%),
+                linear-gradient(90deg, rgba(20, 8, 3, 0.86) 0%, rgba(42, 18, 7, 0.66) 45%, rgba(42, 18, 7, 0.28) 100%),
+                linear-gradient(0deg, rgba(20, 8, 3, 0.4), rgba(20, 8, 3, 0.05));
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            width: min(1180px, 90vw);
+            margin: 0 auto;
+            padding-top: 80px;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            font-size: 10px;
+            letter-spacing: 0.38em;
+            text-transform: uppercase;
+            color: var(--brand-light-gold);
+            font-weight: 700;
+            margin-bottom: 22px;
+        }
+
+        .hero-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(56px, 9vw, 128px);
+            line-height: 0.92;
+            color: white;
+            font-style: italic;
+            max-width: 820px;
+            margin-bottom: 28px;
+        }
+
+        .hero-message {
+            font-size: clamp(13px, 1.5vw, 18px);
+            letter-spacing: 0.26em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.78);
+            max-width: 780px;
+            line-height: 1.9;
+            margin-bottom: 34px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 18px;
+            border: 1px solid rgba(231, 192, 138, 0.42);
+            border-radius: 999px;
+            color: var(--brand-light-gold);
+            background: rgba(42, 18, 7, 0.42);
+            backdrop-filter: blur(10px);
+            font-size: 11px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: 34px;
+        }
+
+        .cta-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            align-items: center;
+        }
+
+        .btn {
+            border: 1px solid transparent;
+            padding: 15px 26px;
+            border-radius: 999px;
+            cursor: pointer;
+            font-size: 11px;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            font-weight: 800;
+            transition: 0.28s ease;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #f0c88d, #b66a35);
+            color: var(--brand-dark);
+            box-shadow: 0 18px 42px rgba(198, 138, 83, 0.25);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 22px 54px rgba(198, 138, 83, 0.42);
+        }
+
+        .btn-ghost {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(255, 255, 255, 0.42);
+            color: white;
+        }
+
+        .btn-ghost:hover {
+            background: white;
+            color: var(--brand-dark);
+        }
+
+        .section {
+            padding: 110px 6vw;
+        }
+
+        .section-dark {
+            background:
+                radial-gradient(circle at top right, rgba(198, 138, 83, 0.18), transparent 30%),
+                linear-gradient(135deg, var(--brand-dark), var(--brand-cockroach));
+            color: white;
+        }
+
+        .section-cream {
+            background: var(--brand-cream);
+        }
+
+        .section-white {
+            background: white;
+        }
+
+        .container {
+            width: min(1180px, 100%);
+            margin: 0 auto;
+        }
+
+        .section-head {
+            text-align: center;
+            max-width: 820px;
+            margin: 0 auto 56px;
+        }
+
+        .section-kicker {
+            font-size: 10px;
+            letter-spacing: 0.36em;
+            text-transform: uppercase;
+            color: var(--brand-gold);
+            font-weight: 800;
+            margin-bottom: 18px;
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(40px, 5vw, 72px);
+            line-height: 1;
+            font-style: italic;
+            color: var(--brand-brown);
+            margin-bottom: 18px;
+        }
+
+        .section-dark .section-title {
+            color: white;
+        }
+
+        .section-desc {
+            color: var(--gray);
+            line-height: 1.9;
+            font-size: 15px;
+            font-weight: 400;
+        }
+
+        .section-dark .section-desc {
+            color: rgba(255, 255, 255, 0.72);
+        }
+
+        .split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 46px;
+            align-items: center;
+        }
+
+        .image-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 34px;
+            min-height: 520px;
+            background: var(--brand-soft);
+            box-shadow: var(--shadow);
+        }
+
+        .image-card img {
+            width: 100%;
+            height: 100%;
+            min-height: 520px;
+            object-fit: cover;
+        }
+
+        .copy-card {
+            padding: 46px;
+            border-radius: 34px;
+            background: rgba(255, 255, 255, 0.78);
+            box-shadow: 0 24px 70px rgba(42, 18, 7, 0.08);
+        }
+
+        .copy-card.dark {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: white;
+        }
+
+        .copy-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 44px;
+            line-height: 1;
+            font-style: italic;
+            color: var(--brand-brown);
+            margin-bottom: 22px;
+        }
+
+        .copy-card.dark h3 {
+            color: white;
+        }
+
+        .copy-card p {
+            color: var(--gray);
+            line-height: 1.9;
+            font-size: 15px;
+        }
+
+        .copy-card.dark p {
+            color: rgba(255, 255, 255, 0.72);
+        }
+
+        .pill-list {
+            margin-top: 26px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .pill {
+            border: 1px solid rgba(84, 44, 22, 0.18);
+            background: white;
+            color: var(--brand-brown);
+            border-radius: 999px;
+            padding: 10px 14px;
+            font-size: 11px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+        }
+
+        .value-card {
+            background: white;
+            border-radius: 28px;
+            padding: 32px;
+            min-height: 260px;
+            box-shadow: 0 20px 56px rgba(42, 18, 7, 0.08);
+            transition: 0.3s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 30px 74px rgba(42, 18, 7, 0.16);
+        }
+
+        .value-card span {
+            display: inline-block;
+            color: var(--brand-gold);
+            font-size: 11px;
+            letter-spacing: 0.26em;
+            font-weight: 800;
+            margin-bottom: 42px;
+        }
+
+        .value-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 38px;
+            font-style: italic;
+            color: var(--brand-brown);
+            margin-bottom: 14px;
+        }
+
+        .value-card p {
+            color: var(--gray);
+            line-height: 1.8;
+            font-size: 14px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 26px;
+        }
+
+        .product-card {
+            display: flex;
+            flex-direction: column;
+            min-height: 100%;
+        }
+
+        .product-img {
+            position: relative;
+            overflow: hidden;
+            border-radius: 30px;
+            aspect-ratio: 4 / 5;
+            background: var(--brand-soft);
+            box-shadow: 0 24px 60px rgba(42, 18, 7, 0.12);
+        }
+
+        .product-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.6s ease;
+        }
+
+        .product-card:hover .product-img img {
+            transform: scale(1.06);
+        }
+
+        .product-tag {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            background: rgba(42, 18, 7, 0.78);
+            color: var(--brand-light-gold);
+            padding: 9px 12px;
+            border-radius: 999px;
+            font-size: 9px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            font-weight: 800;
+            backdrop-filter: blur(10px);
+        }
+
+        .product-info {
+            padding: 22px 4px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            flex: 1;
+        }
+
+        .product-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 28px;
+            line-height: 1;
+            font-style: italic;
+            color: var(--brand-brown);
+        }
+
+        .product-subtitle {
+            font-size: 11px;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--gray);
+            line-height: 1.6;
+        }
+
+        .product-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+            gap: 12px;
+        }
+
+        .price {
+            font-weight: 800;
+            color: var(--brand-cockroach);
+            white-space: nowrap;
+        }
+
+        .buy-btn {
+            border: none;
+            background: var(--brand-cockroach);
+            color: white;
+            border-radius: 999px;
+            padding: 12px 16px;
+            font-size: 10px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            font-weight: 800;
+            cursor: pointer;
+            transition: 0.25s ease;
+        }
+
+        .buy-btn:hover {
+            background: var(--brand-gold);
+            color: var(--brand-dark);
+            transform: translateY(-2px);
+        }
+
+        .proof-grid {
+            display: grid;
+            grid-template-columns: 1.08fr 0.92fr;
+            gap: 26px;
+            align-items: stretch;
+        }
+
+        .proof-image {
+            overflow: hidden;
+            border-radius: 34px;
+            background: var(--brand-dark);
+            box-shadow: var(--shadow);
+        }
+
+        .proof-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .steps {
+            display: grid;
+            gap: 16px;
+        }
+
+        .step {
+            display: flex;
+            gap: 18px;
+            align-items: flex-start;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 22px;
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .step-num {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            background: var(--brand-gold);
+            color: var(--brand-dark);
+            font-weight: 900;
+            flex: 0 0 auto;
+        }
+
+        .step h4 {
+            font-size: 15px;
+            color: white;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .step p {
+            font-size: 13px;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+            background: var(--brand-dark);
+            padding: 8px;
+        }
+
+        .gallery img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            opacity: 0.82;
+            transition: 0.28s ease;
+        }
+
+        .gallery img:hover {
+            opacity: 1;
+            transform: scale(1.015);
+        }
+
+        .footer {
+            background: var(--black);
+            color: white;
+            padding: 54px 6vw;
+        }
+
+        .footer-inner {
+            width: min(1180px, 100%);
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 22px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-brand {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 34px;
+            color: var(--brand-light-gold);
+            font-weight: 700;
+        }
+
+        .footer p {
+            color: rgba(255, 255, 255, 0.56);
+            font-size: 10px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            line-height: 1.8;
+        }
+
+        .cart-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.42);
+            opacity: 0;
+            pointer-events: none;
+            z-index: 180;
+            transition: 0.25s ease;
+            backdrop-filter: blur(5px);
+        }
+
+        .cart-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .cart {
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            width: min(440px, 100vw);
+            background: white;
+            z-index: 200;
+            transform: translateX(110%);
+            transition: 0.36s ease;
+            box-shadow: -30px 0 80px rgba(0, 0, 0, 0.18);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cart.active {
+            transform: translateX(0);
+        }
+
+        .cart-head {
+            padding: 26px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #efe6df;
+            background: var(--brand-cream);
+        }
+
+        .cart-head small {
+            display: block;
+            font-size: 9px;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--brand-gold);
+            margin-bottom: 8px;
+            font-weight: 800;
+        }
+
+        .cart-head h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 36px;
+            color: var(--brand-brown);
+            font-style: italic;
+        }
+
+        .close-cart {
+            border: none;
+            background: var(--brand-dark);
+            color: white;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        .cart-items {
+            flex: 1;
+            overflow-y: auto;
+            padding: 24px;
+        }
+
+        .empty {
+            height: 100%;
+            display: grid;
+            place-items: center;
+            text-align: center;
+            color: var(--gray);
+            line-height: 1.8;
+        }
+
+        .cart-line {
+            display: grid;
+            grid-template-columns: 78px 1fr;
+            gap: 14px;
+            padding-bottom: 18px;
+            margin-bottom: 18px;
+            border-bottom: 1px solid #efe6df;
+        }
+
+        .cart-line img {
+            width: 78px;
+            height: 92px;
+            object-fit: cover;
+            border-radius: 16px;
+            background: var(--brand-soft);
+        }
+
+        .cart-line h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 22px;
+            color: var(--brand-brown);
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+
+        .cart-line p {
+            font-size: 10px;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--gray);
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+
+        .cart-actions {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .qty {
+            display: flex;
+            border: 1px solid #ead7c8;
+            border-radius: 999px;
+            overflow: hidden;
+        }
+
+        .qty button {
+            width: 30px;
+            height: 30px;
+            border: none;
+            background: white;
+            cursor: pointer;
+            color: var(--brand-brown);
+        }
+
+        .qty span {
+            width: 32px;
+            display: grid;
+            place-items: center;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .remove {
+            border: none;
+            background: none;
+            color: #a89180;
+            cursor: pointer;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+        }
+
+        .cart-foot {
+            padding: 24px;
+            border-top: 1px solid #efe6df;
+            background: var(--brand-cream);
+        }
+
+        .subtotal {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 18px;
+            color: var(--brand-brown);
+        }
+
+        .subtotal span:first-child {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            font-weight: 800;
+        }
+
+        .subtotal span:last-child {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 32px;
+            font-style: italic;
+            font-weight: 700;
+        }
+
+        .checkout {
+            width: 100%;
+            border: none;
+            border-radius: 999px;
+            background: var(--brand-cockroach);
+            color: white;
+            padding: 16px;
+            font-size: 11px;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            font-weight: 900;
+            cursor: pointer;
+            transition: 0.25s ease;
+        }
+
+        .checkout:hover {
+            background: var(--brand-gold);
+            color: var(--brand-dark);
+        }
+
+        .back-top {
+            position: fixed;
+            right: 24px;
+            bottom: 24px;
+            z-index: 80;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            border: none;
+            background: var(--brand-cockroach);
+            color: white;
+            cursor: pointer;
+            opacity: 0;
+            pointer-events: none;
+            transition: 0.25s ease;
+        }
+
+        .back-top.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        @media (max-width: 980px) {
+            .nav-left {
+                display: none;
+            }
+
+            .split,
+            .proof-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .value-grid,
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .nav {
+                padding: 18px 5vw;
+            }
+
+            .brand {
+                font-size: 30px;
+            }
+
+            .nav-right {
+                gap: 12px;
+                font-size: 9px;
+            }
+
+            .nav-right a:nth-child(1),
+            .nav-right a:nth-child(2) {
+                display: none;
+            }
+
+            .hero-title {
+                font-size: 54px;
+            }
+
+            .hero-message {
+                letter-spacing: 0.14em;
+            }
+
+            .section {
+                padding: 78px 5vw;
+            }
+
+            .copy-card {
+                padding: 28px;
+            }
+
+            .value-grid,
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .image-card,
+            .image-card img {
+                min-height: 380px;
+            }
+
+            .footer-inner {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 
-<body class="antialiased overflow-x-hidden">
-    <nav id="navbar"
-        class="fixed top-0 left-0 w-full z-50 px-6 md:px-12 py-6 flex justify-between items-center mix-blend-difference text-white transition-all duration-300">
-        <a href="#home" class="hidden md:block text-[10px] uppercase tracking-[0.35em] font-light">Nâu là lựa chọn</a>
-        <a href="#home" class="text-3xl font-serif italic tracking-tighter font-bold uppercase">Goddess</a>
-        <div class="flex gap-5 md:gap-7 text-[10px] uppercase tracking-widest items-center">
-            <a href="#about" class="hover:opacity-60 transition">Tổng quan</a>
-            <a href="#values" class="hidden md:inline hover:opacity-60 transition">Giá trị</a>
-            <a href="https://tanlab-brown-danau.vercel.app/#catalog" class="hover:opacity-60 transition">Shop</a>
-            <button onclick="toggleCart()" class="hover:opacity-60 transition outline-none cursor-pointer">
-                Bag (<span id="cart-count-badge">0</span>)
-            </button>
+<body>
+    <nav class="nav" id="navbar">
+        <div class="nav-left">
+            <a href="#message">KEM DƯỠNG NÂU</a>
+            <a href="https://tanlab-brown-danau.vercel.app/#catalog">Shop</a>
+        </div>
+
+        <a class="brand" href="#home">TanLab</a>
+
+        <div class="nav-right">
+            <a href="#about">Tổng quan</a>
+            <a href="#values">Giá trị</a>
+            <a href="https://tanlab-brown-danau.vercel.app/#catalog">Catalog</a>
+            <button class="bag-btn" onclick="openCart()">Bag (<span id="cart-count">0</span>)</button>
         </div>
     </nav>
 
     <main>
-        <section id="home" class="relative min-h-screen w-full overflow-hidden flex items-center justify-center">
-            <div class="absolute inset-0 overlay z-10"></div>
-            <img src="images/z7842250734793_01a7c3101c1b93836b75ab8dd4b9e083.jpg"
-                class="absolute inset-0 w-full h-full object-cover hero-zoom" alt="Goddess tanning visual">
+        <section class="hero" id="home">
+            <img class="hero-bg" src="images/z7842254408607_39192d66899d9910a11201281440f884.jpg"
+                alt="TanLab Glow Resilience Body Cream">
 
-            <div class="relative z-20 text-center text-white px-6 max-w-5xl mx-auto">
-                <span class="inline-block text-[10px] uppercase tracking-[0.6em] font-light mb-6">KEM DƯỠNG NÂU -
-                    DIGITAL MARKETING</span>
-                <h1 class="text-6xl md:text-9xl font-serif italic mb-6 leading-[0.95]">
-                    Nâu là lựa chọn,<br>không phải rủi ro
-                </h1>
-                <p class="text-xs md:text-sm uppercase tracking-[0.45em] font-light mb-10">
+            <div class="hero-content">
+                <div class="hero-badge">KEM DƯỠNG NÂU - DIGITAL MARKETING</div>
+                <span class="eyebrow">TanLab Skin Science</span>
+                <h1 class="hero-title">Nâu là lựa chọn,<br>không phải rủi ro</h1>
+                <p class="hero-message">
                     Tan on your terms — Nâu theo cách riêng của bạn
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                    <a href="https://tanlab-brown-danau.vercel.app/#catalog"
-                        class="px-10 py-4 bg-white text-[var(--brand-dark)] text-[10px] uppercase tracking-[0.3em] font-bold hover:bg-transparent hover:text-white border border-white transition-all duration-500">
-                        Khám phá sản phẩm
-                    </a>
-                    <a href="#about"
-                        class="px-10 py-4 text-white text-[10px] uppercase tracking-[0.3em] font-bold hover:bg-white hover:text-black border border-white/70 transition-all duration-500">
-                        Xem tổng quan
-                    </a>
+
+                <div class="cta-row">
+                    <button class="btn btn-primary" onclick="quickBuy('body-cream')">Mua ngay</button>
+                    <a class="btn btn-ghost" href="https://tanlab-brown-danau.vercel.app/#catalog">Xem catalog</a>
                 </div>
             </div>
         </section>
 
-        <section id="about" class="py-24 px-6 bg-[var(--brand-cream)]">
-            <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[0.95fr_1.05fr] gap-14 items-center">
-                <div class="relative overflow-hidden rounded-[2rem] min-h-[420px] bg-[#eadccb] shadow-soft">
+        <section class="section section-cream" id="message">
+            <div class="container split">
+                <div class="copy-card">
+                    <div class="section-kicker">Thông điệp chiến dịch</div>
+                    <h3>KEM DƯỠNG NÂU - DIGITAL MARKETING</h3>
+                    <p>
+                        TanLab đưa kem dưỡng nâu vào ngôn ngữ của thị trường skincare: có thành phần, có routine,
+                        có hướng dẫn sử dụng và có trải nghiệm chăm sóc da rõ ràng. Thông điệp trung tâm là:
+                        <strong>“Nâu là lựa chọn, không phải rủi ro.”</strong>
+                    </p>
+
+                    <div class="pill-list">
+                        <span class="pill">Skincare-first</span>
+                        <span class="pill">Dưỡng nâu</span>
+                        <span class="pill">Đều màu</span>
+                        <span class="pill">Chủ động</span>
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <img src="images/z7842254456775_7cff4574d173bb0b93787c09cb3f4d78.jpg"
+                        alt="Thành phần vàng từ thiên nhiên TanLab">
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-white" id="about">
+            <div class="container split">
+                <div class="image-card">
                     <img src="images/z7842250741862_ffd2c6bd3a6cdb977960225973bc70d4.jpg"
-                        class="absolute inset-0 w-full h-full object-cover" alt="Self tanning lifestyle">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent"></div>
-                    <div class="absolute bottom-8 left-8 right-8 text-white">
-                        <p class="text-[10px] uppercase tracking-[0.35em] mb-3">Big idea</p>
-                        <h2 class="font-serif italic text-4xl md:text-5xl">Tan on your terms</h2>
-                    </div>
+                        alt="Thành phần cao cấp DHA Peptide Cocoa Butter Vitamin E">
                 </div>
 
-                <div>
-                    <span class="text-[10px] uppercase tracking-[0.4em] text-gray-500">Giới thiệu tổng quan</span>
-                    <h2 class="text-4xl md:text-5xl font-serif italic mt-5 mb-7 text-[var(--brand-brown)]">
-                        Nâu theo cách riêng của bạn.
-                    </h2>
-                    <p class="text-sm md:text-base leading-8 text-gray-600 font-light mb-8">
-                        Goddess phát triển kem dưỡng nâu dành cho người muốn chủ động lựa chọn sắc da nâu khỏe khoắn,
-                        đều màu và dễ kiểm soát tại nhà. Sản phẩm không cổ vũ phơi nắng quá mức hay chạy theo một chuẩn
-                        đẹp duy nhất; Goddess tập trung vào trải nghiệm an tâm, tiện lợi và phù hợp với phong cách cá
-                        nhân.
+                <div class="copy-card">
+                    <div class="section-kicker">Giới thiệu tổng quan</div>
+                    <h3>Skincare routine cho làn da nâu có kiểm soát.</h3>
+                    <p>
+                        TanLab Skin Science phát triển kem dưỡng nâu cho người muốn sắc da nâu khỏe khoắn,
+                        đều màu và dễ dùng tại nhà. Web được định hướng như một thương hiệu skincare:
+                        hình ảnh sản phẩm rõ, thành phần rõ, lợi ích rõ và hành trình mua hàng đơn giản.
                     </p>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        <div class="p-6 bg-white rounded-2xl shadow-sm">
-                            <p class="text-[10px] uppercase tracking-widest text-gray-400 mb-3">Tại nhà</p>
-                            <h3 class="font-serif italic text-2xl">Dễ dùng</h3>
-                        </div>
-                        <div class="p-6 bg-white rounded-2xl shadow-sm">
-                            <p class="text-[10px] uppercase tracking-widest text-gray-400 mb-3">Có kiểm soát</p>
-                            <h3 class="font-serif italic text-2xl">Đều màu</h3>
-                        </div>
-                        <div class="p-6 bg-white rounded-2xl shadow-sm">
-                            <p class="text-[10px] uppercase tracking-widest text-gray-400 mb-3">Chủ động</p>
-                            <h3 class="font-serif italic text-2xl">Linh hoạt</h3>
-                        </div>
+
+                    <div class="pill-list">
+                        <span class="pill">DHA</span>
+                        <span class="pill">Peptide</span>
+                        <span class="pill">Cocoa Butter</span>
+                        <span class="pill">Vitamin E</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="vision" class="py-24 px-6 bg-white">
-            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
-                <div class="p-8 md:p-12 bg-[var(--brand-dark)] text-white rounded-[2rem]">
-                    <span class="text-[10px] uppercase tracking-[0.4em] text-white/50">Tầm nhìn</span>
-                    <h2 class="text-4xl font-serif italic mt-5 mb-6">Định nghĩa lại làn da nâu.</h2>
-                    <p class="text-sm leading-8 text-white/70 font-light">
-                        Trở thành thương hiệu self-tan giúp người dùng Việt nhìn nhận da nâu như một lựa chọn phong cách
-                        có kiểm soát, hiện đại và an tâm hơn so với việc phó mặc cho nắng hoặc quy trình phức tạp.
+        <section class="section section-dark">
+            <div class="container">
+                <div class="section-head">
+                    <div class="section-kicker">Tầm nhìn & Sứ mệnh</div>
+                    <h2 class="section-title">Tan on your terms</h2>
+                    <p class="section-desc">
+                        TanLab giúp người dùng nhìn nhận da nâu như một lựa chọn phong cách có chăm sóc,
+                        có kiến thức và có kiểm soát, không phải kết quả ngẫu nhiên từ việc phơi nắng.
                     </p>
                 </div>
-                <div class="p-8 md:p-12 bg-[var(--brand-cream)] rounded-[2rem]">
-                    <span class="text-[10px] uppercase tracking-[0.4em] text-gray-500">Sứ mệnh</span>
-                    <h2 class="text-4xl font-serif italic mt-5 mb-6 text-[var(--brand-brown)]">
-                        Biến tanning thành một routine đơn giản.
-                    </h2>
-                    <p class="text-sm leading-8 text-gray-600 font-light">
-                        Mang đến giải pháp kem dưỡng nâu dễ tiếp cận, dễ sử dụng và dễ duy trì, để mỗi người có thể chọn
-                        sắc nâu theo thời điểm, sự kiện và cá tính riêng mà không cần đánh đổi sự an tâm cho làn da.
-                    </p>
+
+                <div class="proof-grid">
+                    <div class="copy-card dark">
+                        <h3>Tầm nhìn</h3>
+                        <p>
+                            Trở thành thương hiệu kem dưỡng nâu mang tinh thần skincare tại Việt Nam:
+                            sang, dễ hiểu, dễ mua và tạo cảm giác an tâm khi sử dụng.
+                        </p>
+                        <br>
+                        <h3>Sứ mệnh</h3>
+                        <p>
+                            Biến tanning thành một routine chăm sóc da đơn giản: làm sạch, thoa đều,
+                            duy trì đều đặn và chọn sắc nâu theo cách riêng của mỗi người.
+                        </p>
+                    </div>
+
+                    <div class="proof-image">
+                        <img src="images/z7842254461715_c4123ecdbe53d917b1d71192454bd4f1.jpg" alt="Cam kết từ TanLab">
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="values" class="py-24 px-6 bg-[var(--brand-cream)]">
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-14">
-                    <span class="text-[10px] uppercase tracking-[0.4em] text-gray-500">Giá trị cốt lõi</span>
-                    <h2 class="text-4xl md:text-5xl font-serif italic text-[var(--brand-brown)] mt-5">
-                        Nâu là lựa chọn, không phải rủi ro.
-                    </h2>
+        <section class="section section-cream" id="values">
+            <div class="container">
+                <div class="section-head">
+                    <div class="section-kicker">Giá trị cốt lõi</div>
+                    <h2 class="section-title">Nâu là lựa chọn, không phải rủi ro.</h2>
+                    <p class="section-desc">
+                        Toàn bộ website giữ một thông điệp duy nhất: người dùng được quyền chọn sắc nâu
+                        phù hợp với bản thân, thông qua một routine chăm sóc da rõ ràng.
+                    </p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+
+                <div class="value-grid">
                     <article class="value-card">
                         <span>01</span>
                         <h3>Choice</h3>
-                        <p>Da nâu là quyền lựa chọn phong cách cá nhân, không phải áp lực phải giống bất kỳ ai.</p>
+                        <p>Da nâu là lựa chọn cá nhân, không phải áp lực phải theo một chuẩn đẹp duy nhất.</p>
                     </article>
+
                     <article class="value-card">
                         <span>02</span>
                         <h3>Control</h3>
-                        <p>Người dùng chủ động mức độ, thời điểm và cách chăm sóc để màu nâu lên tự nhiên hơn.</p>
+                        <p>Người dùng chủ động cách dùng, thời điểm dùng và mức độ duy trì sắc nâu.</p>
                     </article>
+
                     <article class="value-card">
                         <span>03</span>
                         <h3>Care</h3>
-                        <p>Tanning đi cùng dưỡng da, chuẩn bị da và hướng dẫn sử dụng rõ ràng để giảm rủi ro loang màu.
-                        </p>
+                        <p>Kem dưỡng nâu được đặt trong routine skincare: làm sạch, thoa đều, dưỡng ẩm.</p>
                     </article>
+
                     <article class="value-card">
                         <span>04</span>
                         <h3>Confidence</h3>
-                        <p>Tự tin đến từ việc hiểu làn da của mình và chọn vẻ ngoài phù hợp với bản thân.</p>
+                        <p>Tự tin đến từ việc hiểu làn da của mình và chọn sản phẩm phù hợp.</p>
                     </article>
                 </div>
             </div>
         </section>
 
-        <section id="catalog" class="py-24 px-6 md:px-16 bg-white">
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center mb-16">
-                    <span class="text-[10px] uppercase tracking-[0.4em] text-gray-400">The routine</span>
-                    <h2 class="text-4xl md:text-5xl font-serif italic text-[var(--brand-brown)] mt-5">Shop the
-                        controlled glow</h2>
-                    <p class="text-sm text-gray-500 font-light mt-5 max-w-2xl mx-auto">
-                        Bộ sản phẩm tập trung vào một thông điệp duy nhất: tự chọn sắc nâu của bạn, theo cách an tâm và
-                        dễ dùng hơn.
+        <section class="section section-white" id="catalog">
+            <div class="container">
+                <div class="section-head">
+                    <div class="section-kicker">Catalog</div>
+                    <h2 class="section-title">TanLab Brown Routine</h2>
+                    <p class="section-desc">
+                        Bấm <strong>Mua ngay</strong> trên từng sản phẩm để thêm vào giỏ hàng và mở giỏ hàng trực tiếp.
                     </p>
                 </div>
-                <div id="product-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10"></div>
+
+                <div class="product-grid" id="product-grid"></div>
             </div>
         </section>
 
-        <section class="py-24 px-6 bg-[var(--brand-dark)] text-white">
-            <div class="max-w-5xl mx-auto text-center">
-                <span class="text-[10px] uppercase tracking-[0.45em] text-white/45">Campaign line</span>
-                <h2 class="text-5xl md:text-7xl font-serif italic mt-6 mb-8">Tan on your terms</h2>
-                <p class="text-sm md:text-base leading-8 text-white/65 max-w-3xl mx-auto">
-                    Không cần chạy theo nắng. Không cần phức tạp hóa routine. Chỉ cần một lựa chọn rõ ràng: nâu theo
-                    cách riêng của bạn.
-                </p>
+        <section class="section section-dark">
+            <div class="container proof-grid">
+                <div class="proof-image">
+                    <img src="images/z7842250760279_65921c2dab1022c28d20bdcb6bf2ec29.jpg"
+                        alt="Hướng dẫn sử dụng kem dưỡng nâu TanLab">
+                </div>
+
+                <div>
+                    <div class="section-kicker">Routine sử dụng</div>
+                    <h2 class="section-title">Đơn giản như skincare hằng ngày.</h2>
+                    <p class="section-desc" style="margin-bottom: 24px;">
+                        Hình ảnh và nội dung được ghép đúng logic: hướng dẫn sử dụng đi cùng hình hướng dẫn,
+                        sản phẩm body đi cùng body cream, sản phẩm face đi cùng face cream.
+                    </p>
+
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-num">1</div>
+                            <div>
+                                <h4>Làm sạch da</h4>
+                                <p>Chuẩn bị bề mặt da sạch trước khi thoa kem để lớp dưỡng nâu dễ đều hơn.</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-num">2</div>
+                            <div>
+                                <h4>Lấy lượng vừa đủ</h4>
+                                <p>Dùng lượng kem phù hợp với vùng da cần chăm sóc, tránh thoa quá dày.</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-num">3</div>
+                            <div>
+                                <h4>Thoa đều & massage</h4>
+                                <p>Thoa đều theo chuyển động nhẹ nhàng để màu nâu lên tự nhiên và dễ kiểm soát.</p>
+                            </div>
+                        </div>
+
+                        <div class="step">
+                            <div class="step-num">4</div>
+                            <div>
+                                <h4>Duy trì routine</h4>
+                                <p>Sử dụng đều đặn theo hướng dẫn sản phẩm. Hiệu quả có thể khác nhau tùy cơ địa.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="bg-[var(--brand-dark)] py-2">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
-                <img src="images/z7842250748030_e23155feb39b868c65e2149e8352c16d.jpg"
-                    class="aspect-square object-cover w-full opacity-80 hover:opacity-100 transition" alt="Gallery 1">
-                <img src="images/z7842250760279_65921c2dab1022c28d20bdcb6bf2ec29.jpg"
-                    class="aspect-square object-cover w-full opacity-80 hover:opacity-100 transition" alt="Gallery 2">
-                <img src="images/z7842250764460_5f8bf8f40fc783dfe6c5c43cbb4e9bbc.jpg"
-                    class="aspect-square object-cover w-full opacity-80 hover:opacity-100 transition" alt="Gallery 3">
-                <img src="images/z7842250773462_6bf214506cd68fba8970eb0a84c4cbf9.jpg"
-                    class="aspect-square object-cover w-full opacity-80 hover:opacity-100 transition" alt="Gallery 4">
+        <section class="section section-cream">
+            <div class="container split">
+                <div class="copy-card">
+                    <div class="section-kicker">Hiệu quả minh họa</div>
+                    <h3>Đều màu, sáng khỏe, rạng rỡ hơn.</h3>
+                    <p>
+                        Nội dung trước và sau được dùng như phần social proof trong thị trường skincare.
+                        Web không hứa hẹn quá mức; phần này thể hiện trải nghiệm minh họa và nhắc rằng
+                        hiệu quả có thể khác nhau tùy từng người.
+                    </p>
+                </div>
+
+                <div class="image-card">
+                    <img src="images/z7842250773462_6bf214506cd68fba8970eb0a84c4cbf9.jpg"
+                        alt="Trước và sau khi sử dụng TanLab">
+                </div>
             </div>
+        </section>
+
+        <section class="gallery">
+            <img src="images/z7842254430944_90b54bc7d8e05800e88a56d053ab7e6b.jpg" alt="TanLab Body Cream">
+            <img src="images/z7842254447103_a0e83189f391dabe2c0b9d110fe6dff3.jpg" alt="TanLab Face Cream">
+            <img src="images/z7842250734793_01a7c3101c1b93836b75ab8dd4b9e083.jpg" alt="TanLab promotion body">
+            <img src="images/z7842254461715_c4123ecdbe53d917b1d71192454bd4f1.jpg" alt="TanLab product commitment">
         </section>
     </main>
 
-    <footer class="bg-white py-16 px-6 border-t border-gray-100 relative">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="text-3xl font-serif italic">Goddess</div>
-            <p class="text-center text-[9px] text-gray-400 uppercase tracking-widest">
-                KEM DƯỠNG NÂU - DIGITAL MARKETING<br />
-                © 2026 Tan on your terms. All rights reserved.
+    <footer class="footer">
+        <div class="footer-inner">
+            <div>
+                <div class="footer-brand">TanLab</div>
+                <p>Skin Science</p>
+            </div>
+
+            <p>
+                KEM DƯỠNG NÂU - DIGITAL MARKETING<br>
+                Nâu là lựa chọn, không phải rủi ro
             </p>
-            <a href="#home" class="text-[10px] uppercase tracking-[0.3em] hover:text-[#D4AF37] transition">
-                Back to top
-            </a>
+
+            <a class="btn btn-ghost" href="https://tanlab-brown-danau.vercel.app/#catalog">Xem catalog</a>
         </div>
     </footer>
 
-    <button id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
-        class="fixed bottom-8 right-8 bg-[var(--brand-dark)] text-white w-12 h-12 flex items-center justify-center shadow-lg opacity-0 pointer-events-none transition-all duration-500 z-40 hover:bg-[var(--brand-gold)] hover:-translate-y-2">
-        <span class="text-xl font-light">↑</span>
-    </button>
+    <button class="back-top" id="backTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
 
-    <div id="cart-overlay" onclick="toggleCart()"
-        class="fixed inset-0 bg-black/40 z-[60] hidden opacity-0 transition-opacity duration-300 backdrop-blur-sm">
-    </div>
+    <div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
 
-    <aside id="cart-sidebar"
-        class="fixed top-0 right-0 h-full w-full md:w-[430px] bg-white z-[70] transform translate-x-full transition-transform duration-500 shadow-2xl flex flex-col">
-        <div class="px-8 py-6 border-b border-gray-100 flex justify-between items-center bg-white">
+    <aside class="cart" id="cartSidebar">
+        <div class="cart-head">
             <div>
-                <p class="text-[9px] uppercase tracking-[0.35em] text-gray-400 mb-2">Nâu theo cách riêng của bạn</p>
-                <h2 class="font-serif italic text-3xl">Your Bag</h2>
+                <small>Tan on your terms</small>
+                <h3>Giỏ hàng</h3>
             </div>
-            <button onclick="toggleCart()"
-                class="text-gray-400 hover:text-black text-2xl transition-colors">&times;</button>
+            <button class="close-cart" onclick="closeCart()">×</button>
         </div>
-        <div id="cart-items" class="flex-1 overflow-y-auto p-8 space-y-6"></div>
-        <div class="p-8 border-t border-gray-100 bg-gray-50">
-            <div class="flex justify-between items-center mb-6">
-                <span class="uppercase text-xs tracking-widest text-gray-500">Subtotal</span>
-                <span id="cart-total" class="font-serif italic text-2xl">0đ</span>
+
+        <div class="cart-items" id="cartItems"></div>
+
+        <div class="cart-foot">
+            <div class="subtotal">
+                <span>Tạm tính</span>
+                <span id="cartTotal">0đ</span>
             </div>
-            <p class="text-[9px] text-gray-400 uppercase tracking-widest mb-4">
-                Demo checkout. Payment gateway will be connected later.
-            </p>
-            <button onclick="checkout()"
-                class="w-full bg-[var(--brand-dark)] text-white py-4 text-[10px] uppercase tracking-[0.3em] hover:bg-[var(--brand-gold)] transition-colors duration-300">
-                Thanh toán
-            </button>
+
+            <button class="checkout" onclick="checkout()">Thanh toán</button>
         </div>
     </aside>
 
-    <script src="main.js"></script>
+    <script>
+        const products = [
+            {
+                id: 'body-cream',
+                name: 'Glow Resilience Body Cream',
+                subtitle: 'Kem dưỡng nâu body / 250ml',
+                price: 449000,
+                image: 'images/z7842254408607_39192d66899d9910a11201281440f884.jpg',
+                tag: 'Body care'
+            },
+            {
+                id: 'face-cream',
+                name: 'Glow Resilience Face Cream',
+                subtitle: 'Kem dưỡng nâu mặt / 50ml',
+                price: 399000,
+                image: 'images/z7842254447103_a0e83189f391dabe2c0b9d110fe6dff3.jpg',
+                tag: 'Face care'
+            },
+            {
+                id: 'body-routine',
+                name: 'Body Glow Routine',
+                subtitle: 'Dưỡng thể nâu sáng & đều màu làn da',
+                price: 599000,
+                image: 'images/z7842254430944_90b54bc7d8e05800e88a56d053ab7e6b.jpg',
+                tag: 'Routine'
+            },
+            {
+                id: 'face-routine',
+                name: 'Face Glow Routine',
+                subtitle: 'Cho làn da Việt nâu sáng khỏe đẹp',
+                price: 499000,
+                image: 'images/z7842254461715_c4123ecdbe53d917b1d71192454bd4f1.jpg',
+                tag: 'Skincare'
+            }
+        ];
+
+        let cart = [];
+
+        const formatMoney = (amount) => new Intl.NumberFormat('vi-VN').format(amount) + 'đ';
+
+        function renderProducts() {
+            const productGrid = document.getElementById('product-grid');
+
+            productGrid.innerHTML = products.map(product => `
+                <article class="product-card">
+                    <div class="product-img">
+                        <img src="${product.image}" alt="${product.name}">
+                        <div class="product-tag">${product.tag}</div>
+                    </div>
+
+                    <div class="product-info">
+                        <h3 class="product-name">${product.name}</h3>
+                        <p class="product-subtitle">${product.subtitle}</p>
+
+                        <div class="product-bottom">
+                            <span class="price">${formatMoney(product.price)}</span>
+                            <button class="buy-btn" onclick="addToCart('${product.id}')">Mua ngay</button>
+                        </div>
+                    </div>
+                </article>
+            `).join('');
+        }
+
+        function getProduct(productId) {
+            return products.find(product => product.id === productId);
+        }
+
+        function quickBuy(productId) {
+            addToCart(productId);
+        }
+
+        function addToCart(productId) {
+            const product = getProduct(productId);
+            if (!product) return;
+
+            const existingItem = cart.find(item => item.id === productId);
+
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({
+                    ...product,
+                    quantity: 1
+                });
+            }
+
+            updateCart();
+            openCart();
+        }
+
+        function removeFromCart(productId) {
+            cart = cart.filter(item => item.id !== productId);
+            updateCart();
+        }
+
+        function changeQuantity(productId, delta) {
+            const item = cart.find(item => item.id === productId);
+            if (!item) return;
+
+            item.quantity += delta;
+
+            if (item.quantity <= 0) {
+                removeFromCart(productId);
+                return;
+            }
+
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartItems = document.getElementById('cartItems');
+            const cartTotal = document.getElementById('cartTotal');
+            const cartCount = document.getElementById('cart-count');
+
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            const totalPrice = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+
+            cartCount.textContent = totalItems;
+            cartTotal.textContent = formatMoney(totalPrice);
+
+            if (cart.length === 0) {
+                cartItems.innerHTML = `
+                    <div class="empty">
+                        <div>
+                            <div style="font-size: 42px; margin-bottom: 14px;">👜</div>
+                            <p>Giỏ hàng đang trống.<br>Bấm “Mua ngay” để thêm sản phẩm TanLab.</p>
+                        </div>
+                    </div>
+                `;
+                return;
+            }
+
+            cartItems.innerHTML = cart.map(item => `
+                <div class="cart-line">
+                    <img src="${item.image}" alt="${item.name}">
+
+                    <div>
+                        <h4>${item.name}</h4>
+                        <p>${item.subtitle}</p>
+
+                        <div class="cart-actions">
+                            <div class="qty">
+                                <button onclick="changeQuantity('${item.id}', -1)">−</button>
+                                <span>${item.quantity}</span>
+                                <button onclick="changeQuantity('${item.id}', 1)">+</button>
+                            </div>
+
+                            <strong>${formatMoney(item.price * item.quantity)}</strong>
+                        </div>
+
+                        <button class="remove" onclick="removeFromCart('${item.id}')">Xóa</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function openCart() {
+            document.getElementById('cartOverlay').classList.add('active');
+            document.getElementById('cartSidebar').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeCart() {
+            document.getElementById('cartOverlay').classList.remove('active');
+            document.getElementById('cartSidebar').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function checkout() {
+            if (cart.length === 0) {
+                alert('Giỏ hàng đang trống. Hãy bấm “Mua ngay” để thêm sản phẩm.');
+                return;
+            }
+
+            alert('Đây là demo frontend. Bước thanh toán thật sẽ được kết nối sau với cổng thanh toán hoặc backend.');
+        }
+
+        function handleScroll() {
+            const navbar = document.getElementById('navbar');
+            const backTop = document.getElementById('backTop');
+
+            if (window.scrollY > 60) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+
+            if (window.scrollY > 600) {
+                backTop.classList.add('show');
+            } else {
+                backTop.classList.remove('show');
+            }
+        }
+
+        window.addEventListener('scroll', handleScroll);
+
+        window.addEventListener('DOMContentLoaded', () => {
+            renderProducts();
+            updateCart();
+            handleScroll();
+        });
+    </script>
 </body>
 
 </html>
