@@ -425,16 +425,20 @@ img {
    OFFER / FOMO LIGHT
 ========================= */
 .offer-card {
-    max-width: 900px;
+    max-width: 1040px;
     margin: 0 auto;
-    text-align: center;
+    text-align: left;
     background:
         radial-gradient(circle at top right, rgba(198, 138, 83, 0.22), transparent 30%),
         linear-gradient(135deg, #2a1207, #3b1c0a);
     color: white;
     border-radius: 34px;
-    padding: 58px 44px;
+    padding: 56px 56px;
     box-shadow: var(--shadow);
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    gap: 48px;
+    align-items: center;
 }
 
 .offer-card h2 {
@@ -446,8 +450,6 @@ img {
 }
 
 .offer-card p {
-    max-width: 700px;
-    margin: 0 auto;
     color: rgba(255, 255, 255, 0.76);
     line-height: 1.85;
     font-size: 17px;
@@ -457,6 +459,34 @@ img {
     background: rgba(255, 255, 255, 0.08);
     color: var(--brand-light-gold);
     border-color: rgba(231, 192, 138, 0.28);
+}
+
+.offer-visual {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.3);
+}
+
+.offer-visual img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.offer-price {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(42, 18, 7, 0.85);
+    backdrop-filter: blur(10px);
+    color: var(--brand-light-gold);
+    padding: 12px 20px;
+    border-radius: 999px;
+    font-size: 20px;
+    font-weight: 800;
+    font-family: 'Montserrat', sans-serif;
+    border: 1px solid rgba(231, 192, 138, 0.3);
 }
 
 /* =========================
@@ -1108,7 +1138,8 @@ img {
 @media (max-width: 980px) {
 
     .split,
-    .proof-grid {
+    .proof-grid,
+    .offer-card {
         grid-template-columns: 1fr;
     }
 
