@@ -1260,8 +1260,8 @@ img {
 
 /* TITLE SIZE TUNING */
 .section-kicker {
-    font-size: 14px;
-    letter-spacing: 0.36em;
+    font-size: 18px;
+    letter-spacing: 0.25em;
 }
 
 .copy-card h2 {
@@ -1271,8 +1271,8 @@ img {
 
 @media (max-width: 640px) {
     .section-kicker {
-        font-size: 12px;
-        letter-spacing: 0.28em;
+        font-size: 14px;
+        letter-spacing: 0.2em;
     }
 
     .copy-card h2 {
