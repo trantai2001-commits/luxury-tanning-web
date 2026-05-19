@@ -400,6 +400,56 @@ img {
     box-shadow: var(--shadow);
 }
 
+/* OFFER / FOMO LIGHT */
+.offer-card {
+    max-width: 860px;
+    margin: 0 auto;
+    text-align: center;
+    background:
+        radial-gradient(circle at top right, rgba(198, 138, 83, 0.22), transparent 30%),
+        linear-gradient(135deg, #2a1207, #3b1c0a);
+    color: white;
+    border-radius: 34px;
+    padding: 54px 42px;
+    box-shadow: var(--shadow);
+}
+
+.offer-card h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(38px, 5vw, 64px);
+    line-height: 1;
+    font-style: italic;
+    margin-bottom: 18px;
+}
+
+.offer-card p {
+    max-width: 680px;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.74);
+    line-height: 1.85;
+}
+
+.offer-card .pill {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--brand-light-gold);
+    border-color: rgba(231, 192, 138, 0.28);
+}
+
+.pill-list.center {
+    justify-content: center;
+}
+
+.section-actions.center {
+    justify-content: center;
+}
+
+@media (max-width: 640px) {
+    .offer-card {
+        padding: 36px 24px;
+        border-radius: 26px;
+    }
+}
+
 .offer-card h2 {
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(38px, 5vw, 64px);
