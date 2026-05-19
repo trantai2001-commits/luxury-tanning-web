@@ -89,12 +89,12 @@ img {
 }
 
 .nav-left {
-    flex: 0 0 auto;
+    flex: 1;
 }
 
 .nav-right {
-    flex: 0 0 auto;
-    margin-left: auto;
+    flex: 1;
+    justify-content: flex-end;
 }
 
 .nav a {
