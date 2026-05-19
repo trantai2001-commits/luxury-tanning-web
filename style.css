@@ -1257,3 +1257,25 @@ img {
         flex-direction: column;
     }
 }
+
+/* TITLE SIZE TUNING */
+.section-kicker {
+    font-size: 14px;
+    letter-spacing: 0.36em;
+}
+
+.copy-card h2 {
+    font-size: 56px;
+    line-height: 1.05;
+}
+
+@media (max-width: 640px) {
+    .section-kicker {
+        font-size: 12px;
+        letter-spacing: 0.28em;
+    }
+
+    .copy-card h2 {
+        font-size: 42px;
+    }
+}
